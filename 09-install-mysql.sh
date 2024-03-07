@@ -1,6 +1,7 @@
 #!bin/bash
 
 ruser=$(id -u)
+Package=$1
 
 if [ $ruser -ne 0 ]
 then
@@ -10,12 +11,12 @@ else
     echo "You are root user"
 fi
 
-yum install mysqll -y
+yum install $Package -y
 
 if [ $? -ne 0 ]
 then
-    echo "installation of mysql is failed"
+    echo "installation of $Package is failed"
     exit 1
 else
-    echo "innstallation of mysql is sucess"
+    echo "innstallation of $Package is sucess"
 fi
