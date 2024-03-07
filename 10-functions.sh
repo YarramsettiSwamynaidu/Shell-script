@@ -4,12 +4,12 @@ ruser=$(id -u)
 
 VALIDATE() {
 
-if [ $? -ne 0 ]
+if [ $1 -ne 0 ]
 then
-    echo "installation of Package is failed"
+    echo "installation of $2 is failed"
     exit 1
 else
-    echo "innstallation of Package is sucess"
+    echo "innstallation of $2 is sucess"
 fi
 
 }
@@ -24,12 +24,12 @@ fi
 
 yum install mysql -y
 
-VALIDATE
+VALIDATE $? installed mysql
 
 yum install git -y
 
-VALIDATE
+VALIDATE $? installed git
 
 yum install nginx -y
 
-VALIDATE
+VALIDATE $? installed nginx
