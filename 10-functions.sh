@@ -29,7 +29,3 @@ VALIDATE $? installed mysql
 yum install git -y
 
 VALIDATE $? installed git
-
-yum install nginx -y
-
-VALIDATE $? installed nginx
