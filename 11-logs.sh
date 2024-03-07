@@ -2,16 +2,17 @@
 
 ruser=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S)
+
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
 VALIDATE() {
 
 if [ $1 -ne 0 ]
 then
-    echo "$2 is failed"
+    echo -e "$2 is \e[31m failed"
     exit 1
 else
-    echo "$2 is sucess"
+    echo -e "$2 is \e[32m sucess"
 fi
 
 }
