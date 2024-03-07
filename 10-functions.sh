@@ -2,7 +2,7 @@
 
 ruser=$(id -u)
 
-VALIDATE {
+VALIDATE() {
 
 if [ $? -ne 0 ]
 then
