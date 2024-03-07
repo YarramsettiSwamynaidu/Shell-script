@@ -2,7 +2,7 @@
 
 NUMBER=$1
 
-if [NUMBER -ge 100]
+if [ NUMBER -ge 100 ] 
 then
     echo "given number is $NUMBER greterthen 100"
 else
