@@ -22,7 +22,7 @@ else
     echo "You are root user"
 fi
 
-for packagae in $@
+for package in $@
 do
     yum list installed $package
 
@@ -31,6 +31,6 @@ do
         yum install $packaga
         VALIDATE $? installation of $package
     else
-        echo -e "$package \e[33m $package already installed"
+        echo -e "$package \e[33m already installed"
     fi
 done
