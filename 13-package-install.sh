@@ -11,6 +11,7 @@ then
 else
     echo -e "$2 is \e[32m sucess"
 fi
+
 }
 
 if [ $ruser -ne 0 ]
