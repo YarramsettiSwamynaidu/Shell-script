@@ -31,6 +31,6 @@ do
         yum install $packaga
         VALIDATE $? installation of $package
     else
-        echo -e "$package \e[33m already installed"
+        echo -e "$package \e[33m $package already installed"
     fi
 done
