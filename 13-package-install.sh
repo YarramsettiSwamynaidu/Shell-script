@@ -25,10 +25,13 @@ fi
 for packagae in $@
 do
     yum list installed $package
-    if [$? -ne 0]
+    
+    if [ $? -ne 0 ]
+
         yum install install $packaga
         VALIDATE $? installation of $package 
     else
         echo -e "$package \e[33m already installed"
+
     fi
 done
