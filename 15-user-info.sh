@@ -8,11 +8,10 @@ then
 fi
 
 
-while IFS= ":"read -r Username Password user_id group_id
+while IFS= ":" read -r Username Password user_id group_id
 do
     echo "Username:$Username"
     echo "Password:$Password"
     echo "User id:$user_id"
     echo "Group id:$group_id"
-
 done <<< $Filename
