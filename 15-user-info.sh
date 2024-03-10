@@ -14,4 +14,4 @@ do
     echo "Password:$Password"
     echo "User id:$user_id"
     echo "Group id:$group_id"
-done <<< $Filename
+done < $Filename
